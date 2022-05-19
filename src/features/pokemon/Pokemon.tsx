@@ -1,4 +1,3 @@
-import React from 'react'
 import { useGetPokemonByNameQuery } from '../../app/api'
 import Image from 'next/image'
 
