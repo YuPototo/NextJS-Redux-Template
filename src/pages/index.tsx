@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Counter from '../features/counter/Counter'
 
 const IndexPage: NextPage = () => {
@@ -21,43 +22,11 @@ const IndexPage: NextPage = () => {
                 </div>
                 <Counter />
 
-                <div className="mt-10">
-                    <span>Learn </span>
-                    <a
-                        className="text-gray-600 underline"
-                        href="https://reactjs.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        React
-                    </a>
-                    <span>, </span>
-                    <a
-                        className="text-gray-600 underline"
-                        href="https://redux.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Redux
-                    </a>
-                    <span>, </span>
-                    <a
-                        className="text-gray-600 underline"
-                        href="https://redux-toolkit.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Redux Toolkit
-                    </a>
-                    ,<span> and </span>
-                    <a
-                        className="text-gray-600 underline"
-                        href="https://react-redux.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        React Redux
-                    </a>
+                <div className="mt-20 text-center">
+                    <Link href="/anotherPage">
+                        <a className="text-blue-400 underline">Another Page</a>
+                    </Link>{' '}
+                    should share global state
                 </div>
             </header>
         </div>
