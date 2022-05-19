@@ -9,7 +9,7 @@ export default function About() {
 
     return (
         <div className="container md:mx-32 lg:mx-60">
-            <h1 className="mt-20 text-xl font-bold ">Anther Page</h1>
+            <h1 className="mt-20 text-xl font-bold">Anther Page</h1>
             <div className="my-8">
                 count value is{' '}
                 <span className="text-lg text-blue-500">{count}</span>

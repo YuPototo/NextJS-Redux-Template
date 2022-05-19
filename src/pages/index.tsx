@@ -23,10 +23,20 @@ const IndexPage: NextPage = () => {
                 <Counter />
 
                 <div className="mt-20 text-center">
-                    <Link href="/anotherPage">
-                        <a className="text-blue-400 underline">Another Page</a>
-                    </Link>{' '}
-                    should share global state
+                    <div>
+                        <Link href="/anotherPage">
+                            <a className="text-blue-400 underline">
+                                Another Page
+                            </a>
+                        </Link>{' '}
+                        should share global state
+                    </div>
+                    <div className="mt-10">
+                        <Link href="/pokemon">
+                            <a className="text-blue-400 underline">RTK Query</a>
+                        </Link>{' '}
+                        example
+                    </div>
                 </div>
             </header>
         </div>

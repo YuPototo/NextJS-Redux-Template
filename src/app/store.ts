@@ -1,11 +1,16 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import { pokemonApi } from './api'
 
 import counterReducer from '../features/counter/counterSlice'
 
 export function makeStore() {
     return configureStore({
-        reducer: { counter: counterReducer },
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+        reducer: {
+            counter: counterReducer,
+            [pokemonApi.reducerPath]: pokemonApi.reducer,
+        },
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware().concat(pokemonApi.middleware),
     })
 }
 
